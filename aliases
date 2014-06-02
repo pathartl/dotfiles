@@ -1,0 +1,69 @@
+alias rali='source ~/dotfiles/aliases'
+alias eali='vim ~/dotfiles/aliases;rali'
+
+alias sim='sudo vim'
+alias lsa='ls -lah'
+alias l='ls'
+alias cd..='cd ..'
+alias ..='cd ..'
+alias ipconfig='sudo ifconfig'
+alias ifconfig='sudo ifconfig'
+alias dir='ls'
+alias dev='cd /Development'
+alias home='cd ~'
+alias cls='clear'
+
+alias screens='screen -ls'
+alias scrn='screen -ls'
+alias scrnr='screen -r'
+
+cd() {
+  builtin cd "$*"
+  ls
+}
+
+alias service='sudo service'
+
+servicing() {
+  service $2 $1
+}
+
+alias stop='servicing stop'
+alias start='servicing start'
+alias restart='servicing restart'
+
+nginx() {
+  if [ $1 == "restart" ]
+  then
+    restart nginx
+  elif [ $1 == "sites" ]
+  then
+    cd /etc/nginx/sites-available
+  fi
+}
+
+wpperms() {
+  sudo find . -type f -exec chmod 664 {} \;
+  sudo find . -type d -exec chmod 775 {} \;
+  sudo chmod 660 wp-config.php
+}
+
+alias spot='find / -name'
+
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+
+alias spin='sudo spin'
+
+# Wikipedia
+wiki() { dig +short txt $1.wp.dg.cx; }
+
+alias history='fc -l 1'
+
+alias g='git'
+alias ga='git add'
+alias gs='git status'
+alias gco='git checkout'
+alias gc='git commit -v -a'
+alias gbr='git branch -v'
+alias gm='git merge'
+alias gp='git push'
