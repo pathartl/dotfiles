@@ -28,9 +28,9 @@ servicing() {
   service $2 $1
 }
 
-alias stop='servicing stop'
-alias start='servicing start'
-alias restart='servicing restart'
+alias stop='sudo servicing stop'
+alias start='sudo servicing start'
+alias restart='sudo servicing restart'
 
 nginx() {
   if [ $1 == "restart" ]
