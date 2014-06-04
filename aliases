@@ -1,36 +1,43 @@
-alias rali='source ~/dotfiles/aliases'
-alias eali='vim ~/dotfiles/aliases;rali'
+# Navigation
+alias cd..='cd ..'
+alias ..='cd ..'
+alias ....='cd ../..'
+alias ......='cd ../../..'
 
+# Sudo
+alias sudo='sudo '
+
+# Shortcuts
 alias sim='sudo vim'
 alias lsa='ls -lah'
 alias l='ls'
-alias cd..='cd ..'
-alias ..='cd ..'
 alias ipconfig='sudo ifconfig'
 alias ifconfig='sudo ifconfig'
 alias dir='ls'
 alias dev='cd /Development'
 alias home='cd ~'
 alias cls='clear'
+alias install='sudo apt-get install'
+alias uninstall='sudo apt-get remove'
+alias purge='sudo apt-get purge'
+
+# Edit aliases
+alias rali='source ~/dotfiles/aliases'
+alias eali='vim ~/dotfiles/aliases;rali'
+
 
 alias screens='screen -ls'
 alias scrn='screen -ls'
 alias scrnr='screen -r'
 
+
+# Change dir, then show files
 cd() {
   builtin cd "$*"
   ls
 }
 
 alias service='sudo service'
-
-servicing() {
-  service $2 $1
-}
-
-alias stop='sudo servicing stop'
-alias start='sudo servicing start'
-alias restart='sudo servicing restart'
 
 nginx() {
   if [ $1 == "restart" ]
