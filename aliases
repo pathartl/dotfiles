@@ -42,7 +42,7 @@ alias service='sudo service'
 nginx() {
   if [ $1 == "restart" ]
   then
-    restart nginx
+    sudo service nginx restart
   elif [ $1 == "sites" ]
   then
     cd /etc/nginx/sites-available
@@ -52,7 +52,7 @@ nginx() {
 apache() {
   if [ $1 == "restart" ]
   then
-    sudo service restart apache
+    sudo service apache2 restart
   elif [ $1 == "sites" ]
   then
     cd /etc/apache2/sites-available
