@@ -49,6 +49,16 @@ nginx() {
   fi
 }
 
+apache() {
+  if [ $1 == "restart" ]
+  then
+    sudo service restart apache
+  elif [ $1 == "sites" ]
+  then
+    cd /etc/apache2/sites-available
+  fi
+}
+
 wpperms() {
   sudo find . -type f -exec chmod 664 {} \;
   sudo find . -type d -exec chmod 775 {} \;
