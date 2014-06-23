@@ -5,3 +5,5 @@ stty start undef
 # Git stuff
 git config --global color.ui
 git config --global core.editor "vim"
+git config --global user.email "pat@pathartl.me"
+git config --global user.name "Pat Hartl"
