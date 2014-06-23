@@ -1,3 +1,10 @@
+#!/bin/bash
+
+. ~/dotfiles/bash_config
+if [ ! -f ~/.vimrc ]; then
+  ln -s ~/dotfiles/vimrc ~/.vimrc
+fi
+
 # Navigation
 alias cd..='cd ..'
 alias ..='cd ..'

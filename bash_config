@@ -1,0 +1,7 @@
+# Disable CTRL+S freezing
+stty stop undef
+stty start undef
+
+# Git stuff
+git config --global color.ui
+git config --global core.editor "vim"
