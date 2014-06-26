@@ -72,7 +72,7 @@ wpperms() {
   sudo chmod 660 wp-config.php
 }
 
-alias spot='find / -name'
+alias spot='mlocate'
 
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 
