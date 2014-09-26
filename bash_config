@@ -1,6 +1,8 @@
 # Disable CTRL+S freezing
 stty stop undef
 stty start undef
+stty -ixon
+stty ixany
 
 # Git stuff
 git config --global color.ui
