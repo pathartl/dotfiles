@@ -50,6 +50,9 @@ defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 # Disable smart dashes as they’re annoying when typing code
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
+# Disable rubber banding on scroll. It screws up horizontal scrolling on everything.
+defaults write -g NSScrollViewRubberbanding -int 0
+
 ## SSD
 
 # Disable local Time Machine snapshots
